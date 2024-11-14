@@ -1,7 +1,8 @@
 package com.example.rsa;
 
 import java.math.BigInteger;
-import org.apache.log4j.Logger;
+import org.apache.log4j.Logger
+import java.util.*;
 
 public class Main {
     private static final Logger logger = Logger.getLogger(Main.class);
@@ -20,7 +21,8 @@ public class Main {
         logger.info("Modulo: " + modulus);
 
         // Messaggio da cifrare
-        BigInteger message = new BigInteger("123456789");
+        Scanner input = new Scanner(System.in);
+        BigInteger message = new BigInteger(input.nextLine());
 
         // Crittazione del messaggio
         RSAEncryptor encryptor = new RSAEncryptor();
